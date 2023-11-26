@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Alumno extends Model
 {
@@ -19,4 +21,14 @@ class Alumno extends Model
         'activo',
         'carrera',
     ];
+
+    public function carrera(): BelongsTo
+    {
+        return $this->belongsTo(Carrera::class);
+    }
+
+    public function materias(): BelongsToMany
+    {
+        return $this->belongsToMany(Materia::class, 'alumno_materias')->withPivot(['condicion', 'fecha']);
+    }
 }
