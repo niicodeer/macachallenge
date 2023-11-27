@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('materias', function (Blueprint $table) {
             $table->unsignedBigInteger('id_materia', true);
-            $table->string('nom_materia',25);
+            $table->string('nom_materia',50);
             $table->enum('duracion_materia',['Anual', 'Cuatrimestral']);
             $table->integer('horas_cursado');
             $table->foreignId('carrera')->constrained('carreras', 'id_carrera')->cascadeOnDelete()->cascadeOnUpdate();

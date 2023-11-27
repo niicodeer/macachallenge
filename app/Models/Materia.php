@@ -21,11 +21,11 @@ class Materia extends Model
 
     public function carrera(): BelongsTo
     {
-        return $this->belongsTo(Carrera::class);
+        return $this->belongsTo(Carrera::class, 'carrera', 'id_carrera');
     }
 
     public function alumnos(): BelongsToMany
     {
-        return $this->belongsToMany(Alumno::class, 'alumno_materias')->withPivot(['condicion', 'fecha']);
+        return $this->belongsToMany(Alumno::class, 'alumnos_materias', 'id_materia', 'dni')->withPivot(['condicion', 'fecha']);
     }
 }
