@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ToggleColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -34,12 +35,12 @@ class AlumnoResource extends Resource
                     ->minLength(8)
                     ->maxLength(8),
                 TextInput::make('nom_alumno')
-                ->label('Nombre')
+                    ->label('Nombre')
                     ->required()
                     ->minLength(3)
                     ->maxLength(25),
                 TextInput::make('ape_alumno')
-                ->label('Apellido')
+                    ->label('Apellido')
                     ->required()
                     ->minLength(3)
                     ->maxLength(20),
@@ -92,7 +93,12 @@ class AlumnoResource extends Resource
             ])
 
             ->filters([
-                //
+                SelectFilter::make('estado')
+                    ->label('Estado')
+                    ->options([
+                        '1' => 'Activo',
+                        '0' => 'Inactivo',
+                    ])
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
