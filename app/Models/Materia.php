@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Materia extends Model
 {
@@ -24,8 +24,9 @@ class Materia extends Model
         return $this->belongsTo(Carrera::class, 'carrera', 'id_carrera');
     }
 
-    public function alumnos(): BelongsToMany
+    public function alumnos(): HasMany
     {
-        return $this->belongsToMany(Alumno::class, 'alumnos_materias', 'id_materia', 'dni')->withPivot(['condicion', 'fecha']);
+        /* return $this->belongsToMany(Alumno::class, 'alumnos_materias')->withPivot(['condicion', 'fecha']); */
+        return $this->hasMany(AlumnoMateria::class, 'dni');
     }
 }

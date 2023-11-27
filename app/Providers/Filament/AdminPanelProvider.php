@@ -51,6 +51,7 @@ class AdminPanelProvider extends PanelProvider
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
             ])
+            ->breadcrumbs(false)
             ->authMiddleware([
                 Authenticate::class,
             ]);

@@ -65,6 +65,7 @@ class MateriaResource extends Resource
                 ->label('Horas')
                 ->sortable(),
                 TextColumn::make('carrera') //TODO: revisar porque no me trae el nombre de la carrera
+                /* TextColumn::make('carrera.nom_carrera') //TODO: revisar porque no me trae el nombre de la carrera */
 
             ])
             ->filters([

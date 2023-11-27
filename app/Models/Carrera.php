@@ -18,11 +18,11 @@ class Carrera extends Model
 
     public function alumnos(): HasMany
     {
-        return $this->hasMany(Alumno::class);
+        return $this->hasMany(Alumno::class, null, 'id_carrera');
     }
 
     public function materias(): HasMany
     {
-        return $this->hasMany(Materia::class);
+        return $this->hasMany(Materia::class, 'id_materia', 'id_carrera');
     }
 }
