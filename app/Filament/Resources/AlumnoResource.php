@@ -24,7 +24,8 @@ class AlumnoResource extends Resource
 {
     protected static ?string $model = Alumno::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationGroup='Gestion Academica';
 
     public static function form(Form $form): Form
     {

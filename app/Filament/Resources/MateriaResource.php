@@ -19,7 +19,8 @@ class MateriaResource extends Resource
 {
     protected static ?string $model = Materia::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-book-open';
+    protected static ?string $navigationGroup='Gestion Academica';
 
     public static function form(Form $form): Form
     {
