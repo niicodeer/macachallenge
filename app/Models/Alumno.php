@@ -48,6 +48,6 @@ class Alumno extends Model
     public function materias(): HasMany
     {
         /* return $this->belongsToMany(Alumno::class, 'alumnos_materias')->withPivot(['condicion', 'fecha']); */
-        return $this->hasMany(AlumnoMateria::class, 'id_materia');
+        return $this->hasMany(AlumnoMateria::class, 'dni', 'dni');
     }
 }
