@@ -43,7 +43,7 @@ class MateriaResource extends Resource
                     ->maxValue(144)
                     ->required(),
                 Select::make('carrera')
-                    ->relationship('carrera', 'nom_carrera')
+                    ->relationship('carreraa', 'nom_carrera')
                     ->required(),
             ]);
     }
