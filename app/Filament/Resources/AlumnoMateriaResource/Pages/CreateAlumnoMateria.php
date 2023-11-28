@@ -11,4 +11,9 @@ class CreateAlumnoMateria extends CreateRecord
     protected static string $resource = AlumnoMateriaResource::class;
     protected static ?string $title = 'Inscripción a Materias';
     protected ?string $heading = 'Inscripción a Materias';
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

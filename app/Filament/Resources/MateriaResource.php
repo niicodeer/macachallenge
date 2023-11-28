@@ -11,6 +11,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -20,30 +21,30 @@ class MateriaResource extends Resource
     protected static ?string $model = Materia::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
-    protected static ?string $navigationGroup='Gestion Academica';
+    protected static ?string $navigationGroup = 'Gestion Academica';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::make('nom_materia')
-                ->label('Nombre materia')
-                ->maxLength(50)
-                ->required(),
+                    ->label('Nombre materia')
+                    ->maxLength(50)
+                    ->required(),
                 Select::make('duracion_materia')
-                ->options([
-                    'Anual'=>'Anual',
-                    'Cuatrimestral'=>'Cuatrimestral',
-                ])
-                ->required(),
+                    ->options([
+                        'Anual' => 'Anual',
+                        'Cuatrimestral' => 'Cuatrimestral',
+                    ])
+                    ->required(),
                 TextInput::make('horas_cursado')
-                ->numeric()
-                ->minValue(24)
-                ->maxValue(144)
-                ->required(),
+                    ->numeric()
+                    ->minValue(24)
+                    ->maxValue(144)
+                    ->required(),
                 Select::make('carrera')
-                ->relationship('carrera', 'nom_carrera')
-                ->required(),
+                    ->relationship('carrera', 'nom_carrera')
+                    ->required(),
             ]);
     }
 
@@ -52,25 +53,34 @@ class MateriaResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('id_materia')
-                ->label('Id')
-                ->searchable()
-                ->sortable(),
+                    ->label('Id')
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('nom_materia')
-                ->label('Nombre')
-                ->searchable()
-                ->sortable(),
+                    ->label('Nombre')
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('duracion_materia')
-                ->label('Duracion')
-                ->sortable(),
+                    ->label('Duracion')
+                    ->sortable(),
                 TextColumn::make('horas_cursado')
-                ->label('Horas')
-                ->sortable(),
-                TextColumn::make('carrera') //TODO: revisar porque no me trae el nombre de la carrera
-                /* TextColumn::make('carrera.nom_carrera') //TODO: revisar porque no me trae el nombre de la carrera */
-
+                    ->label('Horas')
+                    ->sortable(),
+                TextColumn::make('carreraa.nom_carrera') //TODO: revisar porque no me trae el nombre de la carrera
+                    ->label('Carrera')
+                    ->searchable()
+                    ->sortable(),
             ])
             ->filters([
-                //
+                SelectFilter::make('duracion_materia')
+                    ->options([
+                        "Anual" => "Anual",
+                        "Cuatrimestral" => "Cuatrimestral"
+                    ]),
+                SelectFilter::make('carrera')
+                    ->relationship('carreraa', 'nom_carrera')
+                    ->searchable()
+                    ->preload()
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

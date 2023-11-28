@@ -19,10 +19,10 @@ class Materia extends Model
         'carrera'
     ];
 
-    public function carrera(): BelongsTo
+    public function carreraa(): BelongsTo
     {
         /* return $this->belongsTo(Carrera::class); */
-        return $this->belongsTo(Carrera::class, 'carrera', 'id_carrera');
+        return $this->belongsTo(Carrera::class, 'carrera');
     }
 
     public function alumnos(): HasMany
