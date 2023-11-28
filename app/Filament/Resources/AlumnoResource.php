@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\AlumnoResource\Pages;
 use App\Filament\Resources\AlumnoResource\RelationManagers;
 use App\Filament\Resources\AlumnoResource\RelationManagers\MateriasRelationManager;
+use App\Filament\Resources\AlumnoResource\Widgets\AlumnoOverview;
 use App\Models\Alumno;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Select;
@@ -121,6 +122,12 @@ class AlumnoResource extends Resource
         return [
             MateriasRelationManager::class
         ];
+    }
+    public static function getWidgets(): array
+    {
+      return [
+        AlumnoOverview::class,
+      ];
     }
 
     public static function getPages(): array
