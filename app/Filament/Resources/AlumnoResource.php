@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\AlumnoResource\Pages;
 use App\Filament\Resources\AlumnoResource\RelationManagers;
+use App\Filament\Resources\AlumnoResource\RelationManagers\MateriasRelationManager;
 use App\Models\Alumno;
 use Filament\Forms\Components\Radio;
 use Filament\Forms\Components\Select;
@@ -113,7 +114,7 @@ class AlumnoResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            MateriasRelationManager::class
         ];
     }
 
