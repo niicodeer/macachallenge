@@ -56,8 +56,15 @@ El sistema deberá permitir:
 
 ### Screenshots
 
-![Screen Shot](/screenshots/Home%20Page%20-%20Laptop.png)
-![Screen Shot](/screenshots/Property%20Details%20Page%20-%20Laptop.png)
+![image](https://github.com/niicodeer/macachallenge/assets/97641886/2fe353e9-f6b4-4ec9-8686-4f5d83706711)
+
+![image](https://github.com/niicodeer/macachallenge/assets/97641886/552a8758-ee0a-40c7-9368-e4498ae92c93)
+
+![image](https://github.com/niicodeer/macachallenge/assets/97641886/a124add5-fa47-44d2-bb3a-b91eefd1b622)
+
+![image](https://github.com/niicodeer/macachallenge/assets/97641886/73e02710-ad65-4686-a5cc-354e0935dcce)
+
+
 
 <br/>
 
