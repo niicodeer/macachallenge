@@ -1,66 +1,148 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
+<br/>
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://www.macamedia.com.ar/">
+    <img src="https://www.macamedia.com.ar/assets/isologo_blanco-21b619e1.png" alt="Logo Macamedia" width="200" )/>
+  </a>
+
+  <h3 align="center">Macamedia Challenge</h3>
+  <h4 align="center">Sistema para administrar la información de los estudiantes en una universidad.</h4>
+
+  <p align="center">
+    <a href="https://real-estate-website-lovat.vercel.app/">View Demo</a>
+  </p>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tabla de contenidos
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* [Sobre el Proyecto](#sobre-el-proyecto)
+  - [Desafío](#desafío)
+  - [Screenshots](#screenshots)  
+* [Stack](#stack)
+* [Empezando](#empezando)
+  * [Probar localmente](#probar-localmente)
+* [Autores](#autores)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Sobre el Proyecto
 
-## Learning Laravel
+Proyecto realizado como resolucion del *challange* propuesto por **Macamedia**, utilizando _laravel y FilamentPhp_
+El proyecto se trata de un panel administrativo de una universidad el cual puede gestionar carreras, materias, alumnos y las inscripciones tanto a carreras como a materias.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<br/>
+<br/>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Desafío
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+"Desarrollar un sistema para administrar la información de los estudiantes en una universidad. Dado que la universidad no dispone actualmente de un sistema de gestión, se busca crear uno que posibilite registrar estudiantes, carreras, materias y usuarios. Este sistema permitirá vincular a los estudiantes con una carrera específica y llevar un registro histórico de su progreso académico."
+<br/>
+<br/>
+El sistema deberá permitir:
+<br/>
 
-## Laravel Sponsors
+1. Realizar ABM (alta,baja y modificación) de :
+   1. Alumnos con los siguientes datos: nombre , apellido , DNI, carrera ,teléfono, número de legajo y estado(activo/inactivo).
+   2. Usuarios con los siguientes datos: nombre, correo y contraseña.
+   3. Carreras con los siguientes datos: nombre, duración(años).
+   4. Materias con los siguientes datos: nombre, carrera a la que pertenece, duración (cuatrimestral o anual), horas de cursado.
+      
+2.  Realizar la búsqueda de alumnos por nombre, DNI y número de legajo.
+3.  Realizar el filtrado de alumnos según su estado. Estos son: activo o inactivo.
+4.  Realizar un ordenamiento por nombre alfabéticamente y número de legajo en orden ascendente o descendente de los alumnos.
+5.  Realizar el registro del estado de los alumnos según la materia. Para esto el usuario deberá ingresar el alumno, la materia, el estado (aprobado,desaprobado,regular o libre) y la fecha.
+6.  Visualizar a cada alumno y ver sus registros históricos. Además deberá permitir filtrar estos registros por materias y estados.
+7.  Descargar un listado de todos los alumnos.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+   
 
-### Premium Partners
+### Screenshots
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+![Screen Shot](/screenshots/Home%20Page%20-%20Laptop.png)
+![Screen Shot](/screenshots/Property%20Details%20Page%20-%20Laptop.png)
 
-## Contributing
+<br/>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Stack
 
-## Code of Conduct
+<br/>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Shields](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![Shields](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white) ![Shields](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)  
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<br/>
 
-## License
+## Empezando
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Probar localmente
+
+Requisitos previos:
+- Tener Xampp o Laragon installado, junto con PHP 8, Laravel y PhpMyAdmin / HeidiSql / Sql Workbench.
+
+<br/>
+
+Puedes correr el repositorio localmente siguiendo los siguientes pasos
+
+1. Clone the repo
+
+```sh
+git clone https://github.com/niicodeer/macachallenge.git
+```
+2. Access to project's folder
+
+```sh
+cd macachallenge
+```
+
+3. Generate the .env file
+
+```sh
+cp .env.example .env
+```
+
+4. Configure your APP_KEY in the new .env file
+```sh
+php artisan key:generate
+```
+
+5. Configure the .env file
+
+```sh
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306 //Here put your PORT
+DB_DATABASE=laravel  //Here put your database name
+DB_USERNAME=root  //Here put your database username
+DB_PASSWORD=  //Here put your database password
+```
+
+6. Install packages
+
+```sh
+composer install
+```
+
+7. Run the migrations and seeders
+
+```sh
+php artisan migrate --seed
+```
+
+8. Run the project
+
+```sh
+php artisan serve
+```
+
+9. Use the credentials to login
+
+```sh
+Email:   admin@demo.com
+Password:  123456
+```
+
+<br/>
+<br/>
+
+## Autores
+
+* **Nico Radin** - *Desarrollador Full stack* - [Nico Radin](https://github.com/niicodeer) - 
+
