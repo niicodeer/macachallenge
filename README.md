@@ -8,7 +8,7 @@
   <h4 align="center">Sistema para administrar la información de los estudiantes en una universidad.</h4>
 
   <p align="center">
-    <a href="https://real-estate-website-lovat.vercel.app/">View Demo</a>
+    <a href="https://macachallenge-production.up.railway.app/admin">View Demo</a>
   </p>
 </p>
 
