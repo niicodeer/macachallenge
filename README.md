@@ -17,6 +17,7 @@
 
 * [Sobre el Proyecto](#sobre-el-proyecto)
   - [Desafío](#desafío)
+  - [Diagramas MER-MR](#diagramas-mer.mr)
   - [Screenshots](#screenshots)  
 * [Stack](#stack)
 * [Empezando](#empezando)
@@ -52,7 +53,22 @@ El sistema deberá permitir:
 6.  Visualizar a cada alumno y ver sus registros históricos. Además deberá permitir filtrar estos registros por materias y estados.
 7.  Descargar un listado de todos los alumnos.
 
-   
+<br/>
+<br/>
+
+### Diagramas MER-MR
+
+<p>MER</p>
+
+![image](https://github.com/niicodeer/macachallenge/assets/97641886/6e9fcb86-9ace-48d8-a71a-171bc0c0e861)
+
+
+<p>MR</p>
+
+![image](https://github.com/niicodeer/macachallenge/assets/97641886/d980906b-537a-4f6e-a631-251f0f83752a)
+
+<br/>
+<br/>
 
 ### Screenshots
 
